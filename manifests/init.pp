@@ -1,15 +1,10 @@
-class firefox {
-  $conf = $osfamily ? {
-    'FreeBSD' => '/usr/local/lib/firefox/browser/defaults/preferences/all-romain.js',
-    'Debian'  => '/usr/share/iceweasel/browser/defaults/preferences/all-romain.js',
-  }
+class firefox (
+  $config = $firefox::params::config,
+  $owner = $firefox::params::owner,
+  $group = $firefox::params::group,
+) inherits firefox::params {
 
-  $group = $osfamily ? {
-    'FreeBSD' => 'wheel',
-    default   => 'root',
-  }
-
-  if $osfamily == 'FreeBSD' {
+  if $::osfamily == 'freebsd' {
     $dirs = [
       '/usr/local/lib/firefox/browser/defaults',
       '/usr/local/lib/firefox/browser/defaults/preferences',
@@ -19,13 +14,13 @@ class firefox {
       owner  => 'root',
       group  => 'wheel',
       mode   => '0755',
-      before => Concat[$conf],
+      before => Concat[$config],
     }
   }
 
-  concat { $conf:
+  concat { $config:
     ensure => present,
-    owner  => 'root',
+    owner  => $owner,
     group  => $group,
     mode   => '0644',
   }

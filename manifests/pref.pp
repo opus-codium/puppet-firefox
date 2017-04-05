@@ -10,7 +10,7 @@ define firefox::pref(
   }
 
   concat::fragment { $name:
-    target  => $firefox::conf,
+    target  => $firefox::config,
     content => "pref('${name}', ${quoted_value});\n"
   }
 }
