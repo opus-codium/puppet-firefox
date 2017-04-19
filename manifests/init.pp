@@ -1,7 +1,7 @@
 class firefox (
-  $config = $firefox::params::config,
-  $owner = $firefox::params::owner,
-  $group = $firefox::params::group,
+  String $config = $firefox::params::config,
+  String $owner = $firefox::params::owner,
+  String $group = $firefox::params::group,
 ) inherits firefox::params {
 
   if $::osfamily == 'freebsd' {
