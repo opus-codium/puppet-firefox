@@ -3,4 +3,4 @@ fixtures:
     concat: "https://github.com/puppetlabs/puppetlabs-concat"
     stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib"
   symlinks:
-    taiga: "#{source_dir}"
+    firefox: "#{source_dir}"
