@@ -1,0 +1,2 @@
+---
+firefox::config: '/usr/share/firefox-esr/browser/defaults/preferences/00-puppet-preferences.js'

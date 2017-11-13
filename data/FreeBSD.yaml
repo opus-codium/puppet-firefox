@@ -1,0 +1,6 @@
+---
+firefox::config: '/usr/local/lib/firefox/browser/defaults/preferences/00-puppet-preferences.js'
+firefox::group: 'wheel'
+firefox::managed_directories:
+- '/usr/local/lib/firefox/browser/defaults'
+- '/usr/local/lib/firefox/browser/defaults/preferences'

@@ -1,0 +1,5 @@
+---
+firefox::config: '/usr/lib/firefox/browser/defaults/preferences/00-puppet-preferences.js'
+firefox::group: 'root'
+firefox::owner: 'root'
+firefox::managed_directories: []
