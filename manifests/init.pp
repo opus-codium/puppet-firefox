@@ -1,5 +1,5 @@
 class firefox (
-  String $config = $firefox::params::config,
+  Stdlib::Absolutepath $config = $firefox::params::config,
   String $owner = $firefox::params::owner,
   String $group = $firefox::params::group,
 ) inherits firefox::params {
