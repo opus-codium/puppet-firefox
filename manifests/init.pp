@@ -3,6 +3,8 @@ class firefox (
   String                      $owner,
   String                      $group,
   Array[Stdlib::Absolutepath] $managed_directories,
+  String                      $package,
+  Enum['present', 'latest']   $package_ensure,
 ) {
 
   file { $managed_directories:
@@ -18,5 +20,9 @@ class firefox (
     owner  => $owner,
     group  => $group,
     mode   => '0644',
+  }
+
+  package { $package:
+    ensure => $package_ensure,
   }
 }
