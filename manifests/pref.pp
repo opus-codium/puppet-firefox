@@ -1,5 +1,6 @@
 define firefox::pref(
   Variant[Integer, Float, String, Boolean] $value,
+  Boolean $locked = false,
 ) {
   include firefox
 
@@ -9,8 +10,14 @@ define firefox::pref(
     $quoted_value = $value
   }
 
+  if $locked {
+    $function = 'lockPref'
+  } else {
+    $function = 'pref'
+  }
+
   concat::fragment { $name:
     target  => $firefox::config,
-    content => "pref(\"${name}\", ${quoted_value});\n"
+    content => "${function}(\"${name}\", ${quoted_value});\n"
   }
 }

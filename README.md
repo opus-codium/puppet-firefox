@@ -60,3 +60,9 @@ Default: 'root'
 Setting value.
 
 Default: undef
+
+##### `locked`
+
+If set to true, the user is not allowed to change this setting.
+
+Default: 'false'

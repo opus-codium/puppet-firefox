@@ -6,6 +6,7 @@ describe 'firefox::pref' do
   let(:params) do
     {
       value: pref_value,
+      locked: pref_locked,
     }
   end
   let(:facts) do
@@ -13,6 +14,9 @@ describe 'firefox::pref' do
       osfamily: 'FreeBSD',
     }
   end
+
+  let(:pref_value) { 'value' }
+  let(:pref_locked) { :undef }
 
   context 'with a boolean value' do
     let(:pref_value) do
@@ -46,5 +50,11 @@ describe 'firefox::pref' do
 
       it { is_expected.to contain_concat__fragment('an.option.name').with(content: %(pref("an.option.name", "a 'value' with \\"quotes\\"");\n)) }
     end
+  end
+
+  context 'locked preferences' do
+    let(:pref_locked) { true }
+
+    it { is_expected.to contain_concat__fragment('an.option.name').with(content: %(lockPref("an.option.name", "value");\n)) }
   end
 end
