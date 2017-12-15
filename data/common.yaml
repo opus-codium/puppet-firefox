@@ -3,3 +3,5 @@ firefox::config: '/usr/lib/firefox/browser/defaults/preferences/00-puppet-prefer
 firefox::group: 'root'
 firefox::owner: 'root'
 firefox::managed_directories: []
+firefox::package: 'firefox'
+firefox::package_ensure: 'present'
