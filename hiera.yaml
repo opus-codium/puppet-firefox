@@ -4,7 +4,11 @@ defaults:
   datadir: 'data'
   data_hash: 'yaml_data'
 hierarchy:
+  - name: 'Operating System Family with architecture'
+    path: '%{facts.os.family}-%{facts.os.architecture}.yaml'
+
   - name: 'Operating System Family'
     path: '%{facts.os.family}.yaml'
+
   - name: 'common'
     path: 'common.yaml'
