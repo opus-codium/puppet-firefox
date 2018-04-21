@@ -11,4 +11,4 @@ describe 'firefox' do
   it { is_expected.to compile.with_all_deps }
 
   it { is_expected.to contain_package('firefox') }
-end 
+end
