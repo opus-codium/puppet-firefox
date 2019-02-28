@@ -1,6 +1,6 @@
 # puppet-firefox
 
-[![Build Status](https://travis-ci.org/opus-codium/puppet-firefox.svg?branch=master)](https://travis-ci.org/opus-codium/puppet-firefox)
+[![Build Status](https://travis-ci.com/opus-codium/puppet-firefox.svg?branch=master)](https://travis-ci.com/opus-codium/puppet-firefox)
 
 1. [Module Description - What the module does and why it is useful](#module-description)
 2. [Usage - Configuration options and additional functionality](#usage)
