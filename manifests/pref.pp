@@ -4,7 +4,7 @@ define firefox::pref(
 ) {
   include firefox
 
-  if is_string($value) {
+  if $value =~ String {
     $quoted_value = inline_template('<%= @value.inspect %>')
   } else {
     $quoted_value = $value
