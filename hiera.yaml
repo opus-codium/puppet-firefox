@@ -7,6 +7,9 @@ hierarchy:
   - name: 'Operating System Family with architecture'
     path: '%{facts.os.family}-%{facts.os.architecture}.yaml'
 
+  - name: 'Operating System Distribution'
+    path: '%{facts.os.family}/%{facts.os.distro.id}.yaml'
+
   - name: 'Operating System Family'
     path: '%{facts.os.family}.yaml'
 
