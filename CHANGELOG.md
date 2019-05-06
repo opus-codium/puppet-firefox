@@ -10,4 +10,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fix PureOS support
 
-[1.0.1]: https://github.com/opus-codium/puppet-firefox/compare/1.0.1...1.0.0
+[1.0.1]: https://github.com/opus-codium/puppet-firefox/compare/1.0.0...1.0.1
