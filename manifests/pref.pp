@@ -1,3 +1,7 @@
+# @summary Manage a Firefox preference
+#
+# @param value Value of the preference
+# @param locked Indicate if users are able to override this setting
 define firefox::pref(
   Variant[Integer, Float, String, Boolean] $value,
   Boolean $locked = false,

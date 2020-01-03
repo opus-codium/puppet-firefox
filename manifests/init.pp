@@ -1,3 +1,11 @@
+# @summary Manage the Firefox web browser
+#
+# @param config Path to Firefox's preferences configuration file
+# @param owner User owning the preferences configuration file
+# @param group Group owning the preferences configuration file
+# @param managed_directories A list of directories to manage
+# @param package The name of the firefox package
+# @param package_ensure Value of the ensure parameter of the firefox package
 class firefox (
   Stdlib::Absolutepath        $config,
   String                      $owner,
