@@ -1,0 +1,38 @@
+{
+  "name": "opuscodium-firefox",
+  "version": "1.0.2",
+  "author": "Opus Codium",
+  "summary": "Installs, configures, and manages the Firefox browser",
+  "license": "Apache-2.0",
+  "source": "https://github.com/opus-codium/puppet-firefox",
+  "project_page": "https://github.com/opus-codium/puppet-firefox",
+  "issues_url": "https://github.com/opus-codium/puppet-firefox/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.0.0 < 7.0.0"
+    }
+  ],
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "11",
+        "12"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 5.0.0 < 8.0.0"
+    }
+  ]
+}
