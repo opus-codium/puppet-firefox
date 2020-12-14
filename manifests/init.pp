@@ -14,7 +14,6 @@ class firefox (
   String                      $package,
   Enum['present', 'latest']   $package_ensure,
 ) {
-
   file { $managed_directories:
     ensure => directory,
     owner  => $owner,
