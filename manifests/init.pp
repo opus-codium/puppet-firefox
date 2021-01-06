@@ -6,6 +6,7 @@
 # @param managed_directories A list of directories to manage
 # @param package The name of the firefox package
 # @param package_ensure Value of the ensure parameter of the firefox package
+# @param package_provider Value of the provider parameter of the firefox package
 class firefox (
   Stdlib::Absolutepath        $config,
   String                      $owner,
@@ -13,6 +14,7 @@ class firefox (
   Array[Stdlib::Absolutepath] $managed_directories,
   String                      $package,
   Enum['present', 'latest']   $package_ensure,
+  Optional[String[1]]         $package_provider = undef,
 ) {
   file { $managed_directories:
     ensure => directory,
@@ -30,6 +32,7 @@ class firefox (
   }
 
   package { $package:
-    ensure => $package_ensure,
+    ensure   => $package_ensure,
+    provider => $package_provider,
   }
 }
