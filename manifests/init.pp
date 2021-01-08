@@ -10,8 +10,8 @@
 # @param package_provider Value of the provider parameter of the firefox package
 class firefox (
   Stdlib::Absolutepath        $config,
-  String                      $owner,
-  String                      $group,
+  Optional[String[1]]         $owner,
+  Optional[String[1]]         $group,
   Array[Stdlib::Absolutepath] $managed_directories,
   String                      $package,
   Enum['present', 'latest']   $package_ensure,

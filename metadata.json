@@ -27,6 +27,12 @@
         "11",
         "12"
       ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "10"
+      ]
     }
   ],
   "requirements": [
