@@ -1,2 +1,8 @@
 ---
+firefox::config: "C:\\Program Files\\Mozilla Firefox\\browser\\defaults\\preferences\\00-puppet-preferences.js"
+firefox::group: ~
+firefox::owner: ~
+firefox::managed_directories:
+  - "C:\\Program Files\\Mozilla Firefox\\browser\\defaults"
+  - "C:\\Program Files\\Mozilla Firefox\\browser\\defaults\\preferences"
 firefox::package_provider: "chocolatey"
