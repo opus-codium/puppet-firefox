@@ -30,13 +30,13 @@ Path to Firefox's preferences configuration file
 
 ##### `owner`
 
-Data type: `String`
+Data type: `Optional[String[1]]`
 
 User owning the preferences configuration file
 
 ##### `group`
 
-Data type: `String`
+Data type: `Optional[String[1]]`
 
 Group owning the preferences configuration file
 
@@ -45,6 +45,14 @@ Group owning the preferences configuration file
 Data type: `Array[Stdlib::Absolutepath]`
 
 A list of directories to manage
+
+##### `manage_package`
+
+Data type: `Boolean`
+
+Manage the firefox package on the system
+
+Default value: ``true``
 
 ##### `package`
 
@@ -57,6 +65,14 @@ The name of the firefox package
 Data type: `Enum['present', 'latest']`
 
 Value of the ensure parameter of the firefox package
+
+##### `package_provider`
+
+Data type: `Optional[String[1]]`
+
+Value of the provider parameter of the firefox package
+
+Default value: ``undef``
 
 ## Defined types
 
