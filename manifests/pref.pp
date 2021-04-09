@@ -21,7 +21,7 @@ define firefox::pref (
   }
 
   concat::fragment { $name:
-    target  => $firefox::config,
+    target  => $firefox::preferences_file,
     content => "${function}(\"${name}\", ${quoted_value});\n",
   }
 }
