@@ -1,3 +1,3 @@
 ---
-firefox::config: /usr/share/purebrowser/browser/defaults/preferences/00-puppet-preferences.js
+firefox::directory: "/usr/share/purebrowser"
 firefox::package: purebrowser

@@ -1,2 +1,2 @@
 ---
-firefox::config: '/usr/lib64/firefox/browser/defaults/preferences/00-puppet-preferences.js'
+firefox::directory: "/usr/lib64/firefox"
