@@ -2,7 +2,4 @@
 firefox::directory: "C:\\Program Files\\Mozilla Firefox"
 firefox::group: ~
 firefox::owner: ~
-firefox::managed_directories:
-  - "C:\\Program Files\\Mozilla Firefox\\browser\\defaults"
-  - "C:\\Program Files\\Mozilla Firefox\\browser\\defaults\\preferences"
 firefox::package_provider: "chocolatey"
