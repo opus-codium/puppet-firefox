@@ -2,6 +2,7 @@
 firefox::distribution: "/usr/lib/firefox"
 firefox::group: 'root'
 firefox::owner: 'root'
-firefox::managed_directories: []
+firefox::managed_directories:
+  - "distribution"
 firefox::package: 'firefox'
 firefox::package_ensure: 'present'

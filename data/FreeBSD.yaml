@@ -4,3 +4,4 @@ firefox::group: 'wheel'
 firefox::managed_directories:
 - "browser/defaults"
 - "browser/defaults/preferences"
+- "distribution"
