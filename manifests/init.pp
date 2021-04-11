@@ -24,12 +24,23 @@ class firefox (
   Stdlib::Absolutepath        $policies_file    = "${directory}/distribution/policies.json",
   Hash                        $policies         = {},
 ) {
+  if $manage_package {
+    package { $package:
+      ensure   => $package_ensure,
+      provider => $package_provider,
+    }
+    $require = Package[$package]
+  } else {
+    $require = undef
+  }
+
   file { $managed_directories.map |$d| { "${directory}/${d}" }:
-    ensure => directory,
-    owner  => $owner,
-    group  => $group,
-    mode   => '0755',
-    before => [
+    ensure  => directory,
+    owner   => $owner,
+    group   => $group,
+    mode    => '0755',
+    require => $require,
+    before  => [
       Concat[$preferences_file],
       File[$policies_file],
     ],
@@ -50,12 +61,5 @@ class firefox (
     content => {
       policies => $policies,
     }.to_json(),
-  }
-
-  if $manage_package {
-    package { $package:
-      ensure   => $package_ensure,
-      provider => $package_provider,
-    }
   }
 }
