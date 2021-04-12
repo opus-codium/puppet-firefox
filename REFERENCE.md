@@ -14,39 +14,57 @@
 
 ## Classes
 
-### `firefox`
+### <a name="firefox"></a>`firefox`
 
 Manage the Firefox web browser
 
 #### Parameters
 
-The following parameters are available in the `firefox` class.
+The following parameters are available in the `firefox` class:
 
-##### `config`
+* [`directory`](#directory)
+* [`owner`](#owner)
+* [`group`](#group)
+* [`package`](#package)
+* [`package_ensure`](#package_ensure)
+* [`manage_package`](#manage_package)
+* [`package_provider`](#package_provider)
+* [`managed_directories`](#managed_directories)
+* [`preferences_file`](#preferences_file)
+* [`policies_file`](#policies_file)
+* [`policies`](#policies)
+
+##### <a name="directory"></a>`directory`
 
 Data type: `Stdlib::Absolutepath`
 
-Path to Firefox's preferences configuration file
+Base directory of Firefox's installation
 
-##### `owner`
-
-Data type: `Optional[String[1]]`
-
-User owning the preferences configuration file
-
-##### `group`
+##### <a name="owner"></a>`owner`
 
 Data type: `Optional[String[1]]`
 
-Group owning the preferences configuration file
+User owning the configuration files
 
-##### `managed_directories`
+##### <a name="group"></a>`group`
 
-Data type: `Array[Stdlib::Absolutepath]`
+Data type: `Optional[String[1]]`
 
-A list of directories to manage
+Group owning the configuration files
 
-##### `manage_package`
+##### <a name="package"></a>`package`
+
+Data type: `String`
+
+The name of the firefox package
+
+##### <a name="package_ensure"></a>`package_ensure`
+
+Data type: `Enum['present', 'latest']`
+
+Value of the ensure parameter of the firefox package
+
+##### <a name="manage_package"></a>`manage_package`
 
 Data type: `Boolean`
 
@@ -54,19 +72,7 @@ Manage the firefox package on the system
 
 Default value: ``true``
 
-##### `package`
-
-Data type: `String`
-
-The name of the firefox package
-
-##### `package_ensure`
-
-Data type: `Enum['present', 'latest']`
-
-Value of the ensure parameter of the firefox package
-
-##### `package_provider`
+##### <a name="package_provider"></a>`package_provider`
 
 Data type: `Optional[String[1]]`
 
@@ -74,23 +80,62 @@ Value of the provider parameter of the firefox package
 
 Default value: ``undef``
 
+##### <a name="managed_directories"></a>`managed_directories`
+
+Data type: `Array[String[1]]`
+
+A list of directories to manage
+
+Default value: `[
+    'browser/defaults',
+    'browser/defaults/preferences',
+    'distribution',
+  ]`
+
+##### <a name="preferences_file"></a>`preferences_file`
+
+Data type: `Stdlib::Absolutepath`
+
+Path to Firefox's preferences configuration file
+
+Default value: `"${directory}/browser/defaults/preferences/00-puppet-preferences.js"`
+
+##### <a name="policies_file"></a>`policies_file`
+
+Data type: `Stdlib::Absolutepath`
+
+Path to Firefox's policies file
+
+Default value: `"${directory}/distribution/policies.json"`
+
+##### <a name="policies"></a>`policies`
+
+Data type: `Hash`
+
+The policies to deploy, see https://github.com/mozilla/policy-templates for the structure of this Hash
+
+Default value: `{}`
+
 ## Defined types
 
-### `firefox::pref`
+### <a name="firefoxpref"></a>`firefox::pref`
 
 Manage a Firefox preference
 
 #### Parameters
 
-The following parameters are available in the `firefox::pref` defined type.
+The following parameters are available in the `firefox::pref` defined type:
 
-##### `value`
+* [`value`](#value)
+* [`locked`](#locked)
+
+##### <a name="value"></a>`value`
 
 Data type: `Variant[Integer, Float, String, Boolean]`
 
 Value of the preference
 
-##### `locked`
+##### <a name="locked"></a>`locked`
 
 Data type: `Boolean`
 
