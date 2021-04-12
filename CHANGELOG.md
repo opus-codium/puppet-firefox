@@ -2,8 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [3.0.0](https://github.com/opus-codium/puppet-firefox/tree/3.0.0) (2021-04-12)
+
+[Full Changelog](https://github.com/opus-codium/puppet-firefox/compare/2.0.0...3.0.0)
+
+**Breaking changes:**
+
+- Rework the way we build the preferences filename [\#33](https://github.com/opus-codium/puppet-firefox/pull/33) ([smortex](https://github.com/smortex))
+
+**Implemented enhancements:**
+
+- Add support for FreeBSD 13 [\#36](https://github.com/opus-codium/puppet-firefox/pull/36) ([smortex](https://github.com/smortex))
+- Add support for policies [\#34](https://github.com/opus-codium/puppet-firefox/pull/34) ([smortex](https://github.com/smortex))
 
 ## [2.0.0](https://github.com/opus-codium/puppet-firefox/tree/2.0.0) (2021-01-11)
 
@@ -23,10 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add support for Ubuntu [\#18](https://github.com/opus-codium/puppet-firefox/pull/18) ([neomilium](https://github.com/neomilium))
 - Add documentation [\#15](https://github.com/opus-codium/puppet-firefox/pull/15) ([smortex](https://github.com/smortex))
 - Add support for KDE neon distribution [\#13](https://github.com/opus-codium/puppet-firefox/pull/13) ([neomilium](https://github.com/neomilium))
-
-**Fixed bugs:**
-
-- Fix KDE neon support [\#17](https://github.com/opus-codium/puppet-firefox/pull/17) ([neomilium](https://github.com/neomilium))
 
 **Merged pull requests:**
 
