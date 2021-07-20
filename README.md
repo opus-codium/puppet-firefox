@@ -1,5 +1,16 @@
 # puppet-firefox
 
+<!-- header GFM -->
+[![Build Status](https://img.shields.io/github/workflow/status/opus-codium/puppet-firefox/Release)](https://github.com/opus-codium/puppet-firefox/releases)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
+[![License](https://img.shields.io/github/license/opus-codium/puppet-firefox.svg)](https://github.com/voxpupuli/opuscodium-firefox/blob/master/LICENSE.md)
+<!-- header -->
+
+#### Table of Contents
+
 <!-- vim-markdown-toc GFM -->
 
 * [Module description](#module-description)
