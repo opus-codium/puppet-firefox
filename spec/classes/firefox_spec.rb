@@ -7,7 +7,7 @@ describe 'firefox' do
 
       it { is_expected.to compile.with_all_deps }
 
-      if os == 'debian-10-x86_64'
+      if ['debian-10-x86_64', 'debian-11-x86_64'].include?(os)
         it { is_expected.to contain_package('firefox-esr') }
       else
         it { is_expected.to contain_package('firefox') }
