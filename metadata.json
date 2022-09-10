@@ -36,7 +36,8 @@
     {
       "operatingsystem": "Windows",
       "operatingsystemrelease": [
-        "10"
+        "10",
+        "11"
       ]
     }
   ],
