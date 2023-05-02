@@ -10,7 +10,7 @@
 
 ### Defined types
 
-* [`firefox::pref`](#firefoxpref): Manage a Firefox preference
+* [`firefox::pref`](#firefox--pref): Manage a Firefox preference
 
 ## Classes
 
@@ -22,77 +22,81 @@ Manage the Firefox web browser
 
 The following parameters are available in the `firefox` class:
 
-* [`directory`](#directory)
-* [`owner`](#owner)
-* [`group`](#group)
-* [`package`](#package)
-* [`package_ensure`](#package_ensure)
-* [`manage_package`](#manage_package)
-* [`package_provider`](#package_provider)
-* [`managed_directories`](#managed_directories)
-* [`preferences_file`](#preferences_file)
-* [`policies_file`](#policies_file)
-* [`policies`](#policies)
+* [`directory`](#-firefox--directory)
+* [`owner`](#-firefox--owner)
+* [`group`](#-firefox--group)
+* [`package`](#-firefox--package)
+* [`package_ensure`](#-firefox--package_ensure)
+* [`manage_package`](#-firefox--manage_package)
+* [`package_provider`](#-firefox--package_provider)
+* [`managed_directories`](#-firefox--managed_directories)
+* [`preferences_file`](#-firefox--preferences_file)
+* [`policies_file`](#-firefox--policies_file)
+* [`policies`](#-firefox--policies)
 
-##### <a name="directory"></a>`directory`
+##### <a name="-firefox--directory"></a>`directory`
 
 Data type: `Stdlib::Absolutepath`
 
 Base directory of Firefox's installation
 
-##### <a name="owner"></a>`owner`
+##### <a name="-firefox--owner"></a>`owner`
 
 Data type: `Optional[String[1]]`
 
 User owning the configuration files
 
-##### <a name="group"></a>`group`
+##### <a name="-firefox--group"></a>`group`
 
 Data type: `Optional[String[1]]`
 
 Group owning the configuration files
 
-##### <a name="package"></a>`package`
+##### <a name="-firefox--package"></a>`package`
 
 Data type: `String`
 
 The name of the firefox package
 
-##### <a name="package_ensure"></a>`package_ensure`
+##### <a name="-firefox--package_ensure"></a>`package_ensure`
 
 Data type: `Enum['present', 'latest']`
 
 Value of the ensure parameter of the firefox package
 
-##### <a name="manage_package"></a>`manage_package`
+##### <a name="-firefox--manage_package"></a>`manage_package`
 
 Data type: `Boolean`
 
 Manage the firefox package on the system
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="package_provider"></a>`package_provider`
+##### <a name="-firefox--package_provider"></a>`package_provider`
 
 Data type: `Optional[String[1]]`
 
 Value of the provider parameter of the firefox package
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="managed_directories"></a>`managed_directories`
+##### <a name="-firefox--managed_directories"></a>`managed_directories`
 
 Data type: `Array[String[1]]`
 
 A list of directories to manage
 
-Default value: `[
+Default value:
+
+```puppet
+[
     'browser/defaults',
     'browser/defaults/preferences',
     'distribution',
-  ]`
+  ]
+```
 
-##### <a name="preferences_file"></a>`preferences_file`
+##### <a name="-firefox--preferences_file"></a>`preferences_file`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -100,7 +104,7 @@ Path to Firefox's preferences configuration file
 
 Default value: `"${directory}/browser/defaults/preferences/00-puppet-preferences.js"`
 
-##### <a name="policies_file"></a>`policies_file`
+##### <a name="-firefox--policies_file"></a>`policies_file`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -108,7 +112,7 @@ Path to Firefox's policies file
 
 Default value: `"${directory}/distribution/policies.json"`
 
-##### <a name="policies"></a>`policies`
+##### <a name="-firefox--policies"></a>`policies`
 
 Data type: `Hash`
 
@@ -118,7 +122,7 @@ Default value: `{}`
 
 ## Defined types
 
-### <a name="firefoxpref"></a>`firefox::pref`
+### <a name="firefox--pref"></a>`firefox::pref`
 
 Manage a Firefox preference
 
@@ -126,20 +130,20 @@ Manage a Firefox preference
 
 The following parameters are available in the `firefox::pref` defined type:
 
-* [`value`](#value)
-* [`locked`](#locked)
+* [`value`](#-firefox--pref--value)
+* [`locked`](#-firefox--pref--locked)
 
-##### <a name="value"></a>`value`
+##### <a name="-firefox--pref--value"></a>`value`
 
 Data type: `Variant[Integer, Float, String, Boolean]`
 
 Value of the preference
 
-##### <a name="locked"></a>`locked`
+##### <a name="-firefox--pref--locked"></a>`locked`
 
 Data type: `Boolean`
 
 Indicate if users are able to override this setting
 
-Default value: ``false``
+Default value: `false`
 
