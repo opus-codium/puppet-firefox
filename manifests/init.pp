@@ -64,6 +64,6 @@ class firefox (
     mode    => '0644',
     content => {
       policies => $policies,
-    }.to_json(),
+    }.stdlib::to_json(),
   }
 }
