@@ -1,7 +1,7 @@
 # puppet-firefox
 
 <!-- header GFM -->
-[![Build Status](https://img.shields.io/github/workflow/status/opus-codium/puppet-firefox/Release)](https://github.com/opus-codium/puppet-firefox/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/opus-codium/puppet-firefox/release.yml)](https://github.com/opus-codium/puppet-firefox/releases)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
 [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/opuscodium/firefox.svg)](https://forge.puppetlabs.com/opuscodium/firefox)
