@@ -4,7 +4,20 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v4.2.0](https://github.com/opus-codium/puppet-firefox/tree/v4.2.0) (2023-06-14)
+## [v5.0.0](https://github.com/opus-codium/puppet-firefox/tree/v5.0.0) (2023-10-05)
+
+[Full Changelog](https://github.com/opus-codium/puppet-firefox/compare/v4.2.0...v5.0.0)
+
+**Breaking changes:**
+
+- Drop Puppet 6 \(EOL\) [\#57](https://github.com/opus-codium/puppet-firefox/pull/57) ([smortex](https://github.com/smortex))
+- Require puppetlabs/stdlib 9.x [\#52](https://github.com/opus-codium/puppet-firefox/pull/52) ([smortex](https://github.com/smortex))
+
+**Implemented enhancements:**
+
+- Add support for Puppet 8 [\#51](https://github.com/opus-codium/puppet-firefox/pull/51) ([smortex](https://github.com/smortex))
+
+## [v4.2.0](https://github.com/opus-codium/puppet-firefox/tree/v4.2.0) (2023-06-15)
 
 [Full Changelog](https://github.com/opus-codium/puppet-firefox/compare/v4.1.0...v4.2.0)
 
