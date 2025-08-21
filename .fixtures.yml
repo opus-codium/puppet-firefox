@@ -1,7 +1,6 @@
+---
 fixtures:
   repositories:
-    chocolatey: "https://github.com/puppetlabs/puppetlabs-chocolatey"
-    concat: "https://github.com/puppetlabs/puppetlabs-concat"
-    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib"
-  symlinks:
-    firefox: "#{source_dir}"
+    chocolatey: https://github.com/puppetlabs/puppetlabs-chocolatey.git
+    concat: https://github.com/puppetlabs/puppetlabs-concat.git
+    stdlib: https://github.com/puppetlabs/puppetlabs-stdlib.git
